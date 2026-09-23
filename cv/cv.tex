@@ -1,0 +1,128 @@
+% ATS-friendly CV: one column, standard section names, real text (no images,
+% icons, tables or text boxes), selectable and copy-pasteable in the PDF.
+% Build:  cd cv && latexmk -pdf cv.tex
+% CI refuses to publish while any \TODO{...} remains.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\hypersetup{pdftitle={Ziqi Xu - CV}, pdfauthor={Ziqi Xu}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{\MakeUppercase}[\vspace{-0.6em}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{0.9em}{0.5em}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt, after=\vspace{5pt}}
+% no hyphenation: split words break ATS keyword matching
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\raggedright
+\newcommand{\entry}[2]{\par\noindent\textbf{#1}\hfill #2\par}
+\newcommand{\TODO}[1]{\textbf{[TODO: #1]}}
+
+\begin{document}
+
+{\LARGE\bfseries Ziqi Xu}\\[3pt]
+Waterloo, ON, Canada \TODO{confirm city} \ | \ \href{mailto:z559xu@uwaterloo.ca}{z559xu@uwaterloo.ca} \ | \ \TODO{phone, optional}\\
+\href{https://helioxv022.github.io}{helioxv022.github.io} \ | \ \href{https://github.com/HelioXv022}{github.com/HelioXv022} \ | \ \TODO{LinkedIn URL}
+
+\section{Summary}
+Physics M.Sc. (University of Waterloo, 2026) with research experience in neural quantum states and
+quantum many-body numerics. I build and test research software in Python (PyTorch, NetKet, JAX, TeNPy)
+for variational Monte Carlo, tensor networks and exact diagonalization. Seeking quantum software
+engineering roles.
+
+\section{Education}
+\entry{M.Sc. in Physics, University of Waterloo, Waterloo, ON}{2024 -- 2026}
+Associate Graduate Student, Perimeter Institute for Theoretical Physics (2024 -- 2026)\\
+Supervisors: Prof. Robert Mann; co-supervisor Prof. Timothy Hsieh\\
+Thesis: \TODO{exact thesis title}
+
+\vspace{5pt}
+\entry{B.Sc. in Theoretical Physics, Nankai University, Tianjin, China}{2020 -- 2024}
+\TODO{GPA or honours, only if strong; otherwise delete this line}
+
+\section{Research Experience}
+\entry{Graduate Researcher, University of Waterloo and Perimeter Institute}{2024 -- 2026}
+\begin{itemize}
+  \item Studied measurement-induced classical correlations in 1D rotated cluster states, using conditional
+        mutual information (CMI) as a diagnostic of how well neural networks can represent them.
+  \item Implemented RBM and autoregressive RNN wavefunctions with variational Monte Carlo in NetKet and
+        PyTorch; benchmarked them against exact diagonalization and MPS/DMRG (TeNPy).
+  \item Wrote exact transfer-matrix code for CMI decay lengths from a bond-dimension-2 MPS, validated against
+        brute-force state-vector calculations (agreement to 1e-12) and tested in CI.
+  \item Manuscript in preparation: \textit{Conditional Information Flow and Neural Representability of 1D
+        Rotated Cluster States}.
+\end{itemize}
+
+\entry{Undergraduate Researcher, Computational Astrophysics}{2023 -- 2024}
+Supervisor: Prof. Yu-Qing Lou, Department of Physics, Tsinghua University
+\begin{itemize}
+  \item Explored nonlinear solution families of the Lane--Emden equation for polytropic stars
+        (n = 1, 3.5, 4, 4.5, 5) with MATLAB ODE solvers; tested mass-integral hypotheses with Simpson
+        quadrature and step-size convergence checks.
+  \item Later re-implemented the solver in Python (SciPy) with analytic-solution tests and GitHub Actions CI.
+\end{itemize}
+
+\entry{Undergraduate Researcher, Machine Learning for Nuclear Physics}{\TODO{dates}}
+Nankai University
+\begin{itemize}
+  \item \TODO{one line: model used (e.g. Twin Neural Network Regression), data, and the result it achieved}
+\end{itemize}
+
+\entry{Project Manager, Super-Resolution Single-Molecule Imaging}{\TODO{dates}}
+Prof. Pan's group, Nankai University
+\begin{itemize}
+  \item \TODO{one line: data-processing pipeline you built or led, team size, outcome}
+\end{itemize}
+
+\section{Projects}
+\entry{Tensor-Network Bearing Fault Diagnosis (team of 3)}{\TODO{date}}
+\begin{itemize}
+  \item Compared matrix-product-state / tensor-train classifiers with MLP and 1D-CNN baselines on the CWRU
+        bearing-fault dataset. \TODO{your part and the accuracy result}
+\end{itemize}
+\entry{Collective AC Quantum Sensing Simulation}{2026}
+\begin{itemize}
+  \item Python package modelling an entangled sensor array; showed that phase disorder turns the linear growth of the
+        collective signal with sensor count N into square-root growth (fitted exponent 0.495 for N~=~4 to 1024); pytest suite and CI.
+\end{itemize}
+\entry{Embedded Systems}{2026}
+\begin{itemize}
+  \item Arduino UNO R4 WiFi and ESP32 prototypes in C/C++, including an LED-matrix state machine.
+        \TODO{add a second project or delete this entry}
+\end{itemize}
+
+\section{Teaching}
+\entry{Teaching Assistant, PHYS 111, University of Waterloo}{\TODO{term}}
+Tutorials, grading and office hours.
+
+\vspace{5pt}
+\entry{Teaching Assistant, Nankai University}{\TODO{years}}
+Electromagnetism, C++ programming and computational physics.
+
+\section{Awards and Competitions}
+\begin{itemize}
+  \item Mathematical Contest in Modeling (MCM/ICM), Problem A, 2022 \TODO{award}
+  \item China Undergraduate Mathematical Contest in Modeling, wave-energy converter optimization \TODO{year and award}
+  \item Shenzhen Cup Mathematical Modeling Challenge, 3D horizontal-well trajectory design \TODO{year and award}
+  \item National College Student Statistical Modeling Competition, 2022 \TODO{award}
+  \item IYPT / CUPT \TODO{role, year and result}
+\end{itemize}
+
+\section{Skills}
+\textbf{Programming:} Python, C++, MATLAB, LaTeX; Git, GitHub Actions, Linux, Jupyter\\
+\textbf{Scientific computing:} NumPy, SciPy, PyTorch, JAX, NetKet, TeNPy, PennyLane, Matplotlib, pytest\\
+\textbf{Methods:} variational Monte Carlo, neural quantum states (RBM, RNN), tensor networks (MPS, DMRG),
+exact diagonalization, ODE integration, numerical quadrature\\
+\textbf{Hardware:} Arduino, ESP32\\
+\textbf{Languages:} English, Mandarin (native)
+
+\end{document}
