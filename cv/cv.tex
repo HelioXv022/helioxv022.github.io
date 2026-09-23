@@ -89,10 +89,12 @@ Prof. Pan's group, Nankai University
   \item Compared matrix-product-state / tensor-train classifiers with MLP and 1D-CNN baselines on the CWRU
         bearing-fault dataset. \TODO{your part and the accuracy result}
 \end{itemize}
-\entry{Collective AC Quantum Sensing Simulation}{2026}
+\entry{Entangled Sensor Arrays under Phase Disorder}{2026}
 \begin{itemize}
-  \item Python package modelling an entangled sensor array; showed that phase disorder turns the linear growth of the
-        collective signal with sensor count N into square-root growth (fitted exponent 0.495 for N~=~4 to 1024); pytest suite and CI.
+  \item Computed quantum and classical Fisher information matrices of GHZ and product probes with squint (JAX);
+        showed that random signal phases reduce the GHZ quantum Fisher information from N\textsuperscript{2} to N/2,
+        and that X gates on sensors with negative coupling recover 0.41 N\textsuperscript{2}.
+  \item Python package with a pytest suite checked against analytic results and GitHub Actions CI.
 \end{itemize}
 \entry{Embedded Systems}{2026}
 \begin{itemize}
@@ -119,7 +121,7 @@ Electromagnetism, C++ programming and computational physics.
 
 \section{Skills}
 \textbf{Programming:} Python, C++, MATLAB, LaTeX; Git, GitHub Actions, Linux, Jupyter\\
-\textbf{Scientific computing:} NumPy, SciPy, PyTorch, JAX, NetKet, TeNPy, PennyLane, Matplotlib, pytest\\
+\textbf{Scientific computing:} NumPy, SciPy, PyTorch, JAX, NetKet, TeNPy, squint, PennyLane, Matplotlib, pytest\\
 \textbf{Methods:} variational Monte Carlo, neural quantum states (RBM, RNN), tensor networks (MPS, DMRG),
 exact diagonalization, ODE integration, numerical quadrature\\
 \textbf{Hardware:} Arduino, ESP32\\

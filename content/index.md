@@ -24,9 +24,9 @@ I'm looking for quantum software engineering roles in Canada. You can reach me a
   <p class="stack">Python · SciPy · unittest · GitHub Actions</p>
 </li>
 <li>
-  <a href="https://github.com/HelioXv022/Quantum-Sensing"><strong>Collective AC sensing with a sensor array</strong></a>
-  <p>A toy model showing how phase disorder cuts the collective signal of an entangled sensor array from N to √N, with an ensemble study and tests.</p>
-  <p class="stack">Python · NumPy · pytest · GitHub Actions</p>
+  <a href="https://github.com/HelioXv022/Quantum-Sensing"><strong>Entangled sensor arrays under phase disorder</strong></a>
+  <p>Quantum Fisher information of GHZ and product probes computed with squint (JAX): random signal phases erase the Heisenberg advantage, and X gates on the right sensors recover 0.41 N².</p>
+  <p class="stack">Python · JAX · squint · NumPy · pytest · GitHub Actions</p>
 </li>
 </ul>
 
