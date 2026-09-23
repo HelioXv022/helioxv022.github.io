@@ -1,0 +1,17 @@
+title: Ziqi Xu
+url: https://helioxv022.github.io
+description: Ziqi Xu, physicist writing research software for quantum many-body problems. M.Sc. Physics, University of Waterloo.
+# Links shown in the footer. Leave url empty to hide an entry.
+links:
+  - label: z559xu@uwaterloo.ca
+    url: mailto:z559xu@uwaterloo.ca
+  - label: GitHub
+    url: https://github.com/HelioXv022
+  - label: CV (PDF)
+    url: /cv.pdf
+  - label: LinkedIn
+    url: ""   # e.g. https://www.linkedin.com/in/your-handle
+  - label: ORCID
+    url: ""   # e.g. https://orcid.org/0000-0000-0000-0000
+  - label: Google Scholar
+    url: ""

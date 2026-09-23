@@ -1,0 +1,11 @@
+_site/
+__pycache__/
+.venv/
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+cv/cv.pdf
+.DS_Store
