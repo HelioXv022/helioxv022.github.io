@@ -30,8 +30,8 @@
 \begin{document}
 
 {\LARGE\bfseries Ziqi Xu}\\[3pt]
-Waterloo, ON, Canada \TODO{confirm city} \ | \ \href{mailto:z559xu@uwaterloo.ca}{z559xu@uwaterloo.ca} \ | \ \TODO{phone, optional}\\
-\href{https://helioxv022.github.io}{helioxv022.github.io} \ | \ \href{https://github.com/HelioXv022}{github.com/HelioXv022} \ | \ \TODO{LinkedIn URL}
+Waterloo, ON, Canada \ | \ \href{mailto:z559xu@uwaterloo.ca}{z559xu@uwaterloo.ca}\\
+\href{https://helioxv022.github.io}{helioxv022.github.io} \ | \ \href{https://github.com/HelioXv022}{github.com/HelioXv022} \ | \ \href{https://www.linkedin.com/in/ziqixu777}{linkedin.com/in/ziqixu777}
 
 \section{Summary}
 Physics M.Sc. (University of Waterloo, 2026) with research experience in neural quantum states and
@@ -43,11 +43,11 @@ engineering roles.
 \entry{M.Sc. in Physics, University of Waterloo, Waterloo, ON}{2024 -- 2026}
 Associate Graduate Student, Perimeter Institute for Theoretical Physics (2024 -- 2026)\\
 Supervisors: Prof. Robert Mann; co-supervisor Prof. Timothy Hsieh\\
-Thesis: \TODO{exact thesis title}
+Thesis: \textit{Conditional Information Flow and Neural Representability of One-Dimensional Rotated Cluster States}
 
 \vspace{5pt}
 \entry{B.Sc. in Theoretical Physics, Nankai University, Tianjin, China}{2020 -- 2024}
-\TODO{GPA or honours, only if strong; otherwise delete this line}
+Culture and Sports Merit Scholarship (2023); University First-Class Athlete certification
 
 \section{Research Experience}
 \entry{Graduate Researcher, University of Waterloo and Perimeter Institute}{2024 -- 2026}
@@ -71,57 +71,54 @@ Supervisor: Prof. Yu-Qing Lou, Department of Physics, Tsinghua University
   \item Later re-implemented the solver in Python (SciPy) with analytic-solution tests and GitHub Actions CI.
 \end{itemize}
 
-\entry{Undergraduate Researcher, Machine Learning for Nuclear Physics}{\TODO{dates}}
-Nankai University
+\entry{Undergraduate Researcher, Machine Learning for Nuclear Physics}{2023 -- 2024}
+Supervisor: Prof. Jinniu Hu, Nankai University
 \begin{itemize}
-  \item \TODO{one line: model used (e.g. Twin Neural Network Regression), data, and the result it achieved}
+  \item Implemented Twin Neural Network Regression (Wetzel, \textit{Machine Learning} 115(7):163) to invert
+        non-injective functions; ran numerical fits across families of non-injective equations and compared
+        k-nearest-neighbor search strategies for resolving ambiguous inverses.
 \end{itemize}
 
-\entry{Project Manager, Super-Resolution Single-Molecule Imaging}{\TODO{dates}}
-Prof. Pan's group, Nankai University
+\entry{Project Manager, Super-Resolution Single-Molecule Imaging}{2021 -- 2023}
+Prof. Leiting Pan's group, Nankai University; Tianjin Municipal Undergraduate Innovation Project
 \begin{itemize}
-  \item \TODO{one line: data-processing pipeline you built or led, team size, outcome}
+  \item Used ImageJ and SMAP for single-molecule localization microscopy; performed cross-correlation
+        analysis and drift correction across roughly 30{,}000 acquired images.
 \end{itemize}
 
 \section{Projects}
-\entry{Tensor-Network Bearing Fault Diagnosis (team of 3)}{\TODO{date}}
+\entry{Collective AC Quantum Sensing Simulation}{2026}
 \begin{itemize}
-  \item Compared matrix-product-state / tensor-train classifiers with MLP and 1D-CNN baselines on the CWRU
-        bearing-fault dataset. \TODO{your part and the accuracy result}
-\end{itemize}
-\entry{Entangled Sensor Arrays under Phase Disorder}{2026}
-\begin{itemize}
-  \item Computed quantum and classical Fisher information matrices of GHZ and product probes with squint (JAX);
-        showed that random signal phases reduce the GHZ quantum Fisher information from N\textsuperscript{2} to N/2,
-        and that X gates on sensors with negative coupling recover 0.41 N\textsuperscript{2}.
-  \item Python package with a pytest suite checked against analytic results and GitHub Actions CI.
+  \item Python package modelling an entangled sensor array; showed that phase disorder turns the linear growth of the
+        collective signal with sensor count N into square-root growth (fitted exponent 0.495 for N~=~4 to 1024); pytest suite and CI.
 \end{itemize}
 \entry{Embedded Systems}{2026}
 \begin{itemize}
   \item Arduino UNO R4 WiFi and ESP32 prototypes in C/C++, including an LED-matrix state machine.
-        \TODO{add a second project or delete this entry}
+  \item Assembled and programmed a Freenove 4WD smart car: GPIO/PWM motor control, sensor integration, and
+        iterative hardware/software debugging.
 \end{itemize}
 
 \section{Teaching}
-\entry{Teaching Assistant, PHYS 111, University of Waterloo}{\TODO{term}}
+\entry{Teaching Assistant, PHYS 111, University of Waterloo}{Fall 2024}
 Tutorials, grading and office hours.
 
 \vspace{5pt}
-\entry{Teaching Assistant, Nankai University}{\TODO{years}}
+\entry{Teaching Assistant, Nankai University}{2021 -- 2023}
 Electromagnetism, C++ programming and computational physics.
 
 \section{Awards and Competitions}
 \begin{itemize}
-  \item Mathematical Contest in Modeling (MCM/ICM), Problem A, 2022 \TODO{award}
-  \item China Undergraduate Mathematical Contest in Modeling, wave-energy converter optimization \TODO{year and award}
-  \item Shenzhen Cup Mathematical Modeling Challenge, 3D horizontal-well trajectory design \TODO{year and award}
-  \item National College Student Statistical Modeling Competition, 2022 \TODO{award}
-  \item IYPT / CUPT \TODO{role, year and result}
+  \item Mathematical Contest in Modeling (MCM/ICM), Problem A, \textit{Power Profile of a Cyclist} -- Finalist Award, 2022
+  \item China Undergraduate Mathematical Contest in Modeling (CUMCM), wave-energy converter optimization -- Provincial Second Prize, 2022
+  \item Shenzhen Cup Mathematical Modeling Challenge, 3D horizontal-well trajectory design -- Second Prize, 2022
+  \item National College Student Statistical Modeling Competition -- Tianjin Municipal First Prize, 2022
+  \item CUPT, team member responsible for \textit{Saving Honey} and \textit{Water Spiral} -- National Second Prize, 2022
 \end{itemize}
 
 \section{Skills}
 \textbf{Programming:} Python, C++, MATLAB, LaTeX; Git, GitHub Actions, Linux, Jupyter\\
-\textbf{Scientific computing:} NumPy, SciPy, PyTorch, JAX, NetKet, TeNPy, squint, PennyLane, Matplotlib, pytest\\
+\textbf{Scientific computing:} NumPy, SciPy, PyTorch, JAX, NetKet, TeNPy, PennyLane, Matplotlib, pytest\\
 \textbf{Methods:} variational Monte Carlo, neural quantum states (RBM, RNN), tensor networks (MPS, DMRG),
 exact diagonalization, ODE integration, numerical quadrature\\
 \textbf{Hardware:} Arduino, ESP32\\
