@@ -40,6 +40,6 @@ Three things stand out.
 
 ## Next
 
-In the thesis I compare these lengths with how well RNN and RBM wavefunctions learn the same distributions. That comparison deserves a post of its own.
+In the thesis I also train RBM, RNN and MPS-based models on this state and compare how easily each one learns it. That comparison is in [Expressive is not the same as learnable](/posts/2026-09-structure-matched-learning/).
 
 The code is [cluster_mps_cmi_length_scan.py](https://github.com/HelioXv022/nqs_project/blob/main/scripts/cluster_state/cluster_mps_cmi_length_scan.py) in my [nqs_project](https://github.com/HelioXv022/nqs_project) repository.

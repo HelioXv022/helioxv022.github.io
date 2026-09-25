@@ -52,12 +52,21 @@ Culture and Sports Merit Scholarship (2023); University First-Class Athlete cert
 \section{Research Experience}
 \entry{Graduate Researcher, University of Waterloo and Perimeter Institute}{2024 -- 2026}
 \begin{itemize}
-  \item Studied measurement-induced classical correlations in 1D rotated cluster states, using conditional
-        mutual information (CMI) as a diagnostic of how well neural networks can represent them.
-  \item Implemented RBM and autoregressive RNN wavefunctions with variational Monte Carlo in NetKet and
-        PyTorch; benchmarked them against exact diagonalization and MPS/DMRG (TeNPy).
-  \item Wrote exact transfer-matrix code for CMI decay lengths from a bond-dimension-2 MPS, validated against
-        brute-force state-vector calculations (agreement to 1e-12) and tested in CI.
+  \item Studied what makes a quantum state learnable by neural networks, using 1D rotated cluster states: the
+        exact MPS bond dimension is 2 at every angle, yet measurement outcomes can stay conditionally dependent
+        over many sites (conditional mutual information, CMI, up to 1 bit).
+  \item Designed an MPS-induced recurrent ansatz whose hidden state is the MPS bond vector, with separate even/odd
+        sublattice tensors that match the state's alternating structure. With 48 real parameters it reached the
+        N~=~64 ground state in all 5 random initializations (median energy-density error 1.6e-13); a
+        bond-dimension-1 (product-state) control stayed at total energy error 32.
+  \item Implemented complex RBM, tanh-RNN (variational Monte Carlo) and GRU models in NetKet and PyTorch and
+        compared them on the same state: the RBM reached median energy-density error 6e-8 at N~=~8 but relies
+        on exact summation that does not scale; the best RNN run was at total energy error 0.57 at N~=~64, still
+        decreasing when a time limit stopped it; a GRU trained on 8192 bitstrings learned the Born distribution
+        (fidelity 0.90) but not the phases. The results indicate that learnability depends on matching the
+        model's hidden update to the state's structure rather than on hidden-state size.
+  \item Wrote exact transfer-matrix code for CMI from a bond-dimension-2 MPS, validated against brute-force
+        state-vector calculations (agreement to 1e-12) and the analytic AKLT result; tested in CI.
   \item Manuscript in preparation: \textit{Conditional Information Flow and Neural Representability of 1D
         Rotated Cluster States}.
 \end{itemize}
