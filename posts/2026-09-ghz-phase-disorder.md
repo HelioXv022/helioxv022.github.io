@@ -2,7 +2,6 @@
 title: What phase disorder does to the GHZ advantage
 date: 2026-09-23
 summary: With squint, a JAX library for differentiable quantum metrology, the quantum Fisher information of a GHZ sensor array under random signal phases takes a few lines. The Heisenberg advantage disappears, and a handful of X gates brings most of it back.
-draft: true
 ---
 
 An entangled array of $N$ qubit sensors can reach the Heisenberg limit: a quantum Fisher information (QFI) of $N^2$ for a signal that every sensor sees the same way, against $N$ for independent sensors. For an AC field that assumption is easy to break. The field reaches different sensors with different phases $\phi_i$, so after demodulation sensor $i$ picks up the signal $\theta$ with a coupling $g_i = \cos\phi_i$ that can be small or even negative.

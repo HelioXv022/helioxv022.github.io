@@ -2,7 +2,6 @@
 title: How far do measurement correlations reach in a cluster state?
 date: 2026-09-22
 summary: Measuring a 1D cluster state in a tilted basis correlates distant outcomes. An exact matrix-product-state calculation shows how far those correlations reach.
-draft: true
 ---
 
 The 1D cluster state is the workhorse of measurement-based quantum computing. Its stabilizers are $Z_{i-1}X_iZ_{i+1}$, and in the computational basis its amplitudes are just signs:
