@@ -1,49 +1,48 @@
 # helioxv022.github.io
 
-Source of my personal site, [helioxv022.github.io](https://helioxv022.github.io): a short profile, projects, writing, and my CV.
+Source for my website, <https://helioxv022.github.io>.
 
-The site is built by a small Python script (`build.py`, about 150 lines) from Markdown, and the CV is compiled from LaTeX. On every push to `main`, GitHub Actions builds both and deploys to GitHub Pages.
+Pages and posts are Markdown, turned into HTML by `build.py`. The CV is LaTeX. Pushing to `main` runs a GitHub Actions workflow that builds both and deploys to Pages.
 
-## Layout
+## Files
 
 ```text
-content/index.md       home page ({{ posts }} is replaced by the list of posts)
-posts/*.md             articles, Markdown with YAML front matter; images in posts/<slug>/
-cv/cv.tex              CV source (ATS-friendly: one column, plain text, standard headings)
-templates/, static/    HTML templates, CSS, favicon
-site.yml               title, URL and footer links
-build.py               Markdown -> _site/, plus an Atom feed and 404 page
-.github/workflows/pages.yml   builds the CV and the site, deploys to Pages
+content/index.md     home page; {{ posts }} becomes the post list
+posts/*.md           posts (YAML front matter); images go in posts/<slug>/
+cv/cv.tex            CV
+templates/           HTML templates
+static/              CSS, favicon
+site.yml             site title, URL, footer links
+build.py             writes _site/, including feed.xml and 404.html
+.github/workflows/pages.yml
 ```
 
-## Local preview
+## Building locally
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python build.py --drafts          # --drafts includes posts marked draft: true
+python build.py --drafts        # --drafts also builds draft posts
 python -m http.server -d _site 8000
 ```
 
-To build the CV locally: `cd cv && latexmk -pdf cv.tex`, then rerun `build.py` to copy it to `/cv.pdf`.
+For the CV: `cd cv && latexmk -pdf cv.tex`. If `cv/cv.pdf` exists, `build.py` copies it to `_site/cv.pdf`.
 
-## Writing a post
+## Posts
 
-Create `posts/YYYY-MM-short-title.md`:
+New post: `posts/YYYY-MM-slug.md`, starting with
 
 ```markdown
 ---
-title: A clear, specific title
+title: ...
 date: 2026-10-01
-summary: One or two sentences for the post list and the feed.
+summary: ...
 draft: true
 ---
-
-Text, with $inline$ and $$display$$ math.
 ```
 
-Posts with `draft: true` are skipped by the published build. Remove that line to publish.
+Math works with `$...$` and `$$...$$`. Drafts don't get published; delete the `draft` line when it's ready.
 
-## Deployment
+## Deploying
 
-In the repository settings, **Pages > Build and deployment > Source** must be set to **GitHub Actions**. The workflow fails on purpose while `cv/cv.tex` still contains `\TODO{...}` markers, so an unfinished CV is never published.
+Set **Settings > Pages > Source** to **GitHub Actions**. The workflow stops if `cv/cv.tex` still has any `\TODO{...}` in it.
